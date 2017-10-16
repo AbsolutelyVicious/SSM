@@ -16,4 +16,6 @@ public interface UserService {
 
     public Boolean saveUser(User user);
 
+    public Boolean deleteUser(String[] ids);
+
 }

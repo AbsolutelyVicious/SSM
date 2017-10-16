@@ -59,4 +59,13 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
+
+    @Override
+    public Boolean deleteUser(String[] ids) {
+        int i = this.userMapper.deleteUser(ids);
+        if(i>0){
+            return true;
+        }
+        return false;
+    }
 }

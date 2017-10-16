@@ -61,6 +61,22 @@ public class UserController {
         return map;
     }
 
-
+    @ResponseBody
+    @RequestMapping("delete")
+    public HashMap<Object, Object> deleteUser(@RequestParam("ids") String[] ids){
+        HashMap<Object, Object> map = new HashMap<>();
+        try {
+            Boolean b = this.userService.deleteUser(ids);
+            if(b){
+                map.put("status","200");
+            }else {
+                map.put("status","500");
+            }
+        } catch (Exception e) {
+            map.put("status","500");
+            e.printStackTrace();
+        }
+        return map;
+    }
 
 }
