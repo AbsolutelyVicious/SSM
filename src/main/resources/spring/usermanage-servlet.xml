@@ -7,11 +7,11 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- 配置注解驱动，替代推荐使用的映射器以及适配器，json转换器 -->
-    <mvc:annotation-driven />
-
     <!-- 开启注解扫描 -->
     <context:component-scan base-package="cn.cntl.usermanage.controller"/>
+
+    <!-- 配置注解驱动，替代推荐使用的映射器以及适配器，json转换器 -->
+    <mvc:annotation-driven />
 
     <!-- 处理静态资源拦截问题 -->
     <mvc:default-servlet-handler />

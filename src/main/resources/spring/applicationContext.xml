@@ -23,10 +23,10 @@
     </bean>
 
     <!-- 扫描包 -->
-    <context:component-scan base-package="cn.cntl.usermanage"/>
-    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <context:component-scan base-package="cn.cntl.usermanage.service" />
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="cn.cntl.usermanage.mapper"/>
-    </bean>-->
+    </bean>
 
     <!--  定义数据源 -->
     <bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">

@@ -8,4 +8,34 @@
         select * from tb_user where id = #{id}
     </select>
 
+    <select id="queryEasyUIResult" resultType="cn.cntl.usermanage.pojo.User">
+        select * from tb_user limit #{start},#{size}
+    </select>
+
+    <select id="queryUserAll" resultType="User">
+        select * from tb_user
+    </select>
+
+    <insert id="saveUser" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO tb_user (
+         user_name,
+         password,
+         name,
+         age,
+         sex,
+         birthday,
+         created,
+         updated
+        ) VALUES (
+          #{userName},
+          #{password},
+          #{name},
+          #{age},
+          #{sex},
+          #{birthday},
+          now(),
+          now()
+        )
+    </insert>
+
 </mapper>
