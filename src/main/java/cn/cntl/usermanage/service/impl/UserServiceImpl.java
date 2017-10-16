@@ -43,4 +43,20 @@ public class UserServiceImpl implements UserService {
         return easyUIResult;
 
     }
+
+    @Override
+    public void addUser(User user1, User user2) {
+        this.userMapper.addUser(user1);
+//        int i=1/0;
+        this.userMapper.addUser(user2);
+    }
+
+    @Override
+    public Boolean saveUser(User user) {
+        int count = this.userMapper.addUser(user);
+        if(count>0){
+            return true;
+        }
+        return false;
+    }
 }

@@ -46,7 +46,7 @@
 			$.messager.alert('提示','表单还未填写完成!');
 			return ;
 		}
-		$.post("/user/save.action",$("#content").serialize(), function(data){
+		$.post("/user/save",$("#content").serialize(), function(data){
 			if(data.status == 200){
 				$.messager.alert('提示','新增会员成功!');
 				$('#userAdd').window('close');
